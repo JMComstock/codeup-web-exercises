@@ -9,11 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-// var name = "Jason";
-// function sayHello(name) {
-//     return("Hello, " + name);
-// }
-// console.log(sayHello(name));
+var name = "Jason";
+function sayHello(name) {
+    return("Hello, " + name);
+}
+console.log(sayHello(name));
 
 /**
  * TODO:
@@ -23,9 +23,9 @@
  * console.log 'helloMessage' to check your work
  */
 
-// sayHello("Jason");
-// var helloMessage = sayHello(name);
-// console.log(helloMessage);
+sayHello("Jason");
+var helloMessage = sayHello(name);
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -34,13 +34,13 @@
  * console.
  */
 
-// var myName = "Jason";
-// console.log(sayHello(myName));
+var myName = "Jason";
+console.log(sayHello(myName));
 
 
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-// var random = Math.floor((Math.random() * 3) + 1);
+Don't modify the following line, it generates a random number between 1 and 3
+and stores it in a variable named random
+var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -60,15 +60,15 @@
  * number)
  */
 
-// function isTwo(number) {
-//     if(number === 2) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
-//
-// console.log(isTwo(random));
+function isTwo(number) {
+    if(number === 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -121,7 +121,7 @@ alert("The amount you should tip is: " + mealCost * tipAmount);
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-// function applyDiscount(price, discountPercentage) {
-//     return (price - (price*discountPercentage));
-// }
-// console.log(applyDiscount(45.99, .12));
+function applyDiscount(price, discountPercentage) {
+    return (price - (price*discountPercentage));
+}
+console.log(applyDiscount(45.99, .12));
