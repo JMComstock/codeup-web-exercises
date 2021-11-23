@@ -145,15 +145,20 @@ let Facebook = 350;
 console.log((Facebook*10) + (Google*6) + (Amazon*4));
 
 // A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
-let classFull = false;
-let classScheduleConflicted = false;
-console.log(classFull && classScheduleConflicted);
+let classNotFull = true;
+let classScheduleNotConflicted = true;
+
+if(classNotFull && classScheduleNotConflicted) {
+     console.log("Welcome to class.");
+} else {
+     console.log("You can't sign up for class, there is a conflict with your schedule.")
+}
 
 // A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
-let itemsBought = 2;
+let itemsBought = 3;
 let offerExpired = false;
 let isPremiumMember = false;
-console.log(itemsBought && offerExpired || isPremiumMember);
+console.log((itemsBought >= 2 || isPremiumMember) && offerExpired);
 
 // Use the following code to follow the instructions below:
 
@@ -165,7 +170,8 @@ var password = 'notastrongpassword';
 // the password must be at least 5 characters
 console.log(password.length >= 5);
 // the password must not include the username
-console.log(!password.indexOf('codeup'));
+console.log(password.includes(username));
+console.log(username.includes(password));
 // the username must be no more than 20 characters
 console.log(username.length <= 20);
 // neither the username or password can start or end with whitespace
