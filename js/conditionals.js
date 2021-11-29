@@ -181,12 +181,11 @@ alert("Your lucky number is: " + luckyNumber + "! Your price before the discount
  * HINT: The way we prompt for a value could be improved
  */
 
-
 let number = "";
 
 let confirmed = confirm("Would you like to enter a number?");
 if(confirmed === true) {
-    prompt("Enter a number: ", "");
+    prompt("Enter a number: ", number);
     alert("The number you entered is an " + evenOrOdd() + " number.");
     alert("The number you entered plus 100 equals: " + add100());
     alert("The number you entered is a " + negativeOrPositive() + " number.");
@@ -196,23 +195,25 @@ if(confirmed === true) {
 console.log(confirmed);
 
 function evenOrOdd() {
-    let number2 = parseInt(number);
-    if(number2 % 2 === 0) {
+    let number1 = parseInt(number);
+    if(number1 % 2 === 0) {
         return "even ";
     } else {
         return "odd ";
     }
 }
 
+function add100(number) {
+    let number2 = parseInt(number);
+    return number2 += 100;
+}
+
 function negativeOrPositive() {
-    if(number >= 0) {
+    let number3 = parseInt(number);
+    if(number3 >= 0) {
         return "positive";
     } else {
         return "negative";
     }
 }
 
-function add100() {
-    let number2 = parseInt(number);
-    return number2 += 100;
-}
