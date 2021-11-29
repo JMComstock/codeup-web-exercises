@@ -37,7 +37,6 @@ console.log(helloMessage);
 var myName = "Jason";
 console.log(sayHello(myName));
 
-
 /**
  * Don't modify the following line, it generates a random number between 1 and 3
  * and stores it in a variable named random
@@ -98,12 +97,13 @@ console.log(calculateTip(0.15, 33.42));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
 let total = " ";
 
 let mealCost = prompt("The total cost of your meal is: " + total, " ");
 console.log("The gratuity amount entered is: " + mealCost);
 
-let tipAmount = prompt("What percentage would you like to tip? (use a number betweem 0 and 1):", " ");
+let tipAmount = prompt("What percentage would you like to tip? (use a number between 0 and 1):", " ");
 console.log("The tip amount entered is: " + tipAmount);
 
 alert("The amount you should tip is: " + mealCost * tipAmount);
