@@ -42,7 +42,7 @@ function analyzeColor(color) {
     }
 }
 
-console.log(analyzeColor("yellow"));
+console.log(analyzeColor("red"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -57,17 +57,21 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+/*
+
 function analyzeColor(randomColor) {
     return randomColor;
 }
 console.log(randomColor);
+*/
+
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-let color = "red";
+/*let color = "red";
 switch(color) {
     case "red":
         console.log("red is the color of an apple.");
@@ -92,7 +96,7 @@ switch(color) {
         break;
     default:
         console.log("i don't know anything about " + color + ".");
-}
+}*/
 
 /**
  * TODO:
@@ -103,9 +107,11 @@ switch(color) {
 
 /* ########################################################################## */
 
+/*
 let pickColor = prompt("Enter a color from the rainbow ", " ");
 console.log("You entered " + analyzeColor);
 alert(analyzeColor(pickColor));
+*/
 
 /**
  * TODO:
@@ -127,7 +133,7 @@ alert(analyzeColor(pickColor));
  * return value.
  */
 
-function calculateTotal(luckyNumber, totalAmount) {
+/*function calculateTotal(luckyNumber, totalAmount) {
     if(luckyNumber == 0) {
         return totalAmount;
     } else if (luckyNumber == 1) {
@@ -145,7 +151,7 @@ function calculateTotal(luckyNumber, totalAmount) {
 
 console.log(calculateTotal(0, 100));
 console.log(calculateTotal(4, 100));
-console.log(calculateTotal(5, 100));
+console.log(calculateTotal(5, 100));*/
 
 /**
  * TODO:
@@ -157,10 +163,12 @@ console.log(calculateTotal(5, 100));
  */
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
+/*
 
 let totalAmount = prompt("Enter your total bill: ", "");
 console.log("Your bill amount entered is: " + totalAmount);
 alert("Your lucky number is: " + luckyNumber + "! Your price before the discount is: $" + totalAmount + " Your price after the discount is: $" + (calculateTotal(luckyNumber, totalAmount)));
+*/
 
 /**
  * TODO:
@@ -180,6 +188,8 @@ alert("Your lucky number is: " + luckyNumber + "! Your price before the discount
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+/*
 
 let number = "";
 
@@ -204,16 +214,18 @@ function evenOrOdd() {
 }
 
 function add100(number) {
-    let number2 = parseInt(number);
-    return number2 += 100;
+    let number1 = parseInt(number);
+    return number1 += 100;
 }
 
 function negativeOrPositive() {
-    let number3 = parseInt(number);
-    if(number3 >= 0) {
+    let number1 = parseInt(number);
+    if(number1 >= 0) {
         return "positive";
     } else {
         return "negative";
     }
 }
+*/
+
 
