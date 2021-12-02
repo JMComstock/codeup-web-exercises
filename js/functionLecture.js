@@ -139,7 +139,7 @@ function executeAll() {
     makeLowerCase();
     tellType();
 }
-console.log(executeAll());
+executeAll();
 
 // Execute the following functions, and find the Error: (Hint: try console logging the result)
 let firstName = "Jason";
