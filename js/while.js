@@ -9,8 +9,6 @@ while(x <= 65536) {
 }
 */
 
-
-
 var allCones = Math.floor(Math.random() * 50) + 50;
 
 do {
