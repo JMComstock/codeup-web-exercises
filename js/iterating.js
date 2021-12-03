@@ -69,7 +69,7 @@
         return (numArray[1]);
     }
     function last() {
-        return (numArray[4]);
+        return (numArray[numArray.length-1]);
     }
 
     console.log(first());
