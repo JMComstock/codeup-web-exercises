@@ -28,6 +28,7 @@
     console.log(names[2]);
     console.log(names[3]);
 
+
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
@@ -44,7 +45,7 @@
      */
 
     names.forEach(function(name) {
-        console.log("Here is a lovely name: ", name);
+        console.log("Here is a lovely name:", name);
     });
 
     /**
@@ -60,19 +61,18 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    let numArray = [1, 2, 3, 4, 5];
 
-    function first() {
-        return (numArray[0]);
+    function first(array) {
+        return (array[0]);
     }
-    function second() {
-        return (numArray[1]);
+    function second(array) {
+        return (array[1]);
     }
-    function last() {
-        return (numArray[numArray.length-1]);
+    function last(array) {
+        return (array[array.length-1]);
     }
 
-    console.log(first());
-    console.log(second());
-    console.log(last());
+    console.log(first(names));
+    console.log(second(names));
+    console.log(last(names));
 })();
