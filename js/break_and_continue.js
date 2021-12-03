@@ -1,24 +1,24 @@
-
-let enterOdd = prompt("Enter an odd number between 1 and 50: ", "");
-while(enterOdd % 2 === 0 || enterOdd < 1 || enterOdd > 50) {
-    alert("You did not enter an odd number between 1 and 50...");
-    enterOdd = prompt("Please enter an odd number between 1 and 50.");
-    if((enterOdd % 2 != 0) && enterOdd > 0 && enterOdd < 50) {
+let userNumber = 0;
+do {
+    userNumber = Number(prompt("Enter an odd number between 1 and 50:"));
+    if(userNumber < 1 || userNumber >50) {
+        alert("Number out of bounds");
+    } else if (userNumber % 2 === 0) {
+        alert("Number is not an odd number");
+    } else if (isNaN(userNumber)) {
+        alert("That;s not a number");
+    } else {
+        alert("You entered a valid number");
         break;
     }
-}
-alert("You entered an odd number between 1 and 50!");
+} while (true)
 
-let numSkip = prompt("Enter a number to skip: ", "");
+console.log("Number to skip is: " + userNumber);
 
-do {
-    for(let i=1; i < 51; i++) {
-        if (i % 1 === 0) {
-            console.log("Here is an odd number: " + i);
-        }
+for(let i=1; i<=50; i+=2) {
+    if(i === userNumber) {
+        console.log("Yikes! Skipping number: " + userNumber);
+        continue;
     }
-} while(numSkip) {
-    console.log("Yikes! skipping number: " + numSkip);
+    console.log("Here is an odd number: " + i);
 }
-alert("Number to skip is: " + numSkip);
-
