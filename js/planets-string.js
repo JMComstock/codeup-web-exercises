@@ -25,6 +25,14 @@
      * string, and <li> tags around each planet.
      */
 
-    console.log(planetsArray.join("<br>"));
+    let planetsWithBreakTag = planetsArray.join("<br>");
+    console.log(planetsWithBreakTag);
+    // This will print all the planets on an html page on separate lines for readability
+
+    let planetsList = "<ul><li>" + planetsArray.join("<li>") + "</li></ul>";
+    console.log(planetsList);
+
+     document.getElementsByTagName("body")[0].innerHTML += planetsList;
+    // document.getElementsByTagName("body")[0].innerHTML += planetsWithBreakTag;
 
 })();
