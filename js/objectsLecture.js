@@ -1,23 +1,23 @@
 console.log("welcome to objects");
 
-// let array = [1,2,3,true,false];
-//
-// // let person = new Object();
-//
-// let birthdayObject = {
-//     month: "November",
-//     day: 22,
-//     getDetails : function () {
-//         return this.month + "," + this.day
-//     }
-// }
-//
-// let person = {
-//     name: "Jack",
-//     birthday: birthdayObject,
-//     isTall: false
-// };
-//
+let array = [1,2,3,true,false];
+
+// let person = new Object();
+
+let birthdayObject = {
+    month: "November",
+    day: 22,
+    getDetails : function () {
+        return this.month + "," + this.day
+    }
+}
+
+let person = {
+    name: "Jack",
+    birthday: birthdayObject,
+    isTall: false
+};
+
 function createPerson(name) {
     return {
         firstName: name,
@@ -29,7 +29,7 @@ function createPerson(name) {
 
 let personTwo = createPerson("Laura");
 let personThree = createPerson("Ry");
-// console.log(person);
+console.log(person);
 
 let dog = {
     breed: "Huskey",
