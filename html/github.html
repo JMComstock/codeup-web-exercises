@@ -34,12 +34,60 @@
             margin-left: 20px;
         }
         .sub-nav a {
-            margin-right: 20px;
+            margin-left: 15px;
+            margin-right: 10px;
             text-decoration: none;
+            color: black;
+        }
+        .dot {
+            height: 25px;
+            width: 25px;
+            background-color: #bbb;
+            border-radius: 60%;
+            display: inline-block;
+            padding-left: 5px;
         }
         #people {
-            border-top-color: orange;
-
+            padding: 5px 5px 20px;
+            background-color: white;
+            border-top: solid orange 3px;
+        }
+        .sub-section{
+            margin: 20px;
+        }
+        .sub-section-header {
+            background-color: lightgrey;
+            padding-top: 5px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            border: 1px solid lightgrey;
+        }
+        .sub-section div {
+            padding-top: 5px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            border: 1px solid lightgrey;
+        }
+        .sub-section div a{
+            color: purple;
+            text-decoration: none;
+        }
+        hr {
+            color: lightgrey;
+        }
+        footer {
+            display: inline;
+        }
+        footer a {
+            margin-left: 10px;
+            color: purple;
+        }
+        footer p {
+            display: inline-block;
+        }
+        .footer-Contact {
+            display: inline-block;
+            justify-content: flex-end;
         }
     </style>
 </head>
@@ -55,11 +103,47 @@
         <img src="../assets/CodeupChevron.jpeg" alt="codeup chevron image">
         <h1>Codeup</h1>
         <br><br><br>
-        <a href="#Repositories">Repositories</a>
-        <a href="#People" id="people">People</a>
-        <a href="#MTeams">Teams</a>
-        <a href="#EProjects">Projects</a>
+        <a href="#Repositories">Repositories &nbsp <span class="dot">39</span></a>
+        <a href="#People" id="people">People &nbsp <span class="dot">15</span></a>
+        <a href="#MTeams">Teams &nbsp <span class="dot">7</span></a>
+        <a href="#EProjects">Projects &nbsp <span class="dot">0</span></a>
         <a href="#Settings">Settings</a>
     </div>
+    <section class="sub-section">
+        <div class="sub-section-header">
+            <h3>Codeup's dev team</h3>
+        </div>
+        <div class="div">
+            <img src="../assets/pixel-watermelon.jpeg" height="60px" width="60px" alt="">
+            <a href="#KentBeck">Kent Beck</a>
+            <h5>KentBeck</h5>
+        </div>
+        <div class="div">
+            <img src="../assets/CodeupChevron.jpeg" height="50px" width="50px"  alt="codeup symbol">
+            <a href="#CodeupInstructors">Codeup Instruction Staff</a>
+            <h5>Codeupinstructors</h5>
+        </div>
+        <div class="div">
+            <img src="../assets/pixel-pizza.jpeg" height="50px" width="50 px" alt="">
+            <a href="#MartinFowler">Martin Fowler</a>
+            <h5></h5>
+        </div>
+    </section>
+    <br><br>
+    <hr>
+    <footer>
+        <p>&copy 2018 GitHub, Inc.</p>
+        <a href="#Terms">Terms</a>
+        <a href="#Privacy">Privacy</a>
+        <a href="#Security">Security</a>
+        <a href="#Status">Status</a>
+        <a href="#Help">Help</a>
+        <a href="#ContactGitHub" class="footer-Contact">Contact GitHub</a>
+        <a href="#API" class="footer-Contact">API</a>
+        <a href="#Training" class="footer-Contact">Training</a>
+        <a href="#Shop" class="footer-Contact">Shop</a>
+        <a href="#Blog" class="footer-Contact">Blog</a>
+        <a href="#About" class="footer-Contact">About</a>
+    </footer>
 </body>
 </html>
