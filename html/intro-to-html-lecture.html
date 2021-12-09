@@ -78,13 +78,71 @@
         </table>
     </div>
     <div>
-        <nav>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
+<!--        <form method="POST" action="https://request-inspector.glitch.me/">-->
+
+<!--            <label for="username">Username</label>-->
+<!--            <input id="username" name="username" type="text">-->
+<!--            <br>-->
+
+<!--            <label for="password">Password</label>-->
+<!--            <input id="password" name="password" type="password">-->
+<!--            <br>-->
+
+<!--            <input type="submit">-->
+<!--        </form>-->
+<!--        <form action="https://www.google.com" method="GET">-->
+<!--            <input type="text" name="q">-->
+<!--            <input type="submit" value="Google Search">-->
+<!--        </form>-->
+        <h1>Sign Up</h1>
+        <form method="POST" action="https://request-inspector.glitch.me/">
+
+            <label for="username">Username</label>
+            <input value="Bob" id="username" name="username" type="text">
+            <br>
+
+            <label for="birthday">Birthday</label>
+            <input name="birthday" id="birthday" type="date">
+            <br>
+
+            <label for="emailSubscription">Would you like to sign up for emails?</label>
+            <input type="checkbox" id="emailSubscription" name="emailSubscription">
+            <br>
+
+            <label for="bio">Bio</label>
+            <br>
+            <textarea placeholder="Your bio here." name="bio" id="bio" cols="30" rows="10"></textarea>
+            <br>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+
+            <br>
+            <label for="ValidatePassword">Confirm Password</label>
+            <input id="ValidatePassword" name="password" type="password">
+            <br>
+
+            <label for="">Gender</label><br>
+            <input type="radio" name="gender" value="male">Male
+            <br>
+            <input type="radio" name="gender" value="female">Female
+            <br>
+            <input type="radio" name="gender" value="other">Other
+            <br>
+
+            <label for="hobbies">Hobbies</label>
+            <br>
+            <select name="hobbies" id="hobbies">
+                <option type="checkbox" value="stampCollectors">Stamp Collectors</option>
+                <option type="checkbox" value="funkoPopCollectors">Funko Pop Collectors</option>
+                <option type="checkbox" value="legoMiniFigures">Lego Mini Collectors</option>
+            </select>
+            <br>
+
+            <input type="hidden" name="referred" value="GoogleJobs">
+
+            <input type="submit">
+        </form>
     </div>
 </body>
 </html>
