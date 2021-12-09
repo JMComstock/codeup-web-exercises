@@ -1,0 +1,32 @@
+/*
+1. identify the element you want to style
+2. tag name - will get applied to all of the element type specified
+3. .classValue - applies to all elements with the class name
+4. #idValue - applies to the element with the id name
+*/
+
+#orange {
+    color: orange;
+}
+h1 {
+    color: green;
+}
+
+h1 {
+    color: darkred;
+}
+
+.purple {
+    color: purple;
+}
+
+#title {
+    color: mediumvioletred;
+}
+
+/* SYNTAX */
+
+selector {
+/*    apply css styling here  */
+    property: value;
+}
