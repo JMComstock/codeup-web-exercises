@@ -1,0 +1,19 @@
+body {
+    background-color: lightsteelblue;
+}
+
+div{
+    padding: 50px;
+    border: 3px solid black;
+}
+
+#first {
+    margin-bottom: 40px;
+}
+
+#second {
+    margin-top: 40px;
+    background-color: deeppink;
+    padding: 150px;
+}
+
