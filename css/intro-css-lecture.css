@@ -4,10 +4,19 @@
 3. .classValue - applies to all elements with the class name
 4. #idValue - applies to the element with the id name
 */
+p {
+    color: green;
+    background-color: lavender;
+    border: 4px dotted green;
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: "Times New Roman", serif;
+}
 
 #orange {
     color: orange;
 }
+
 h1 {
     color: green;
 }
@@ -30,3 +39,72 @@ selector {
 /*    apply css styling here  */
     property: value;
 }
+
+div {
+    color: magenta;
+}
+
+a {
+    text-decoration: #f2f2f2;
+}
+
+/*ul li {*/
+/*    text-decoration: none;*/
+/*    list-style-type: none;*/
+/*}*/
+
+.animals {
+    border:3px solid black;
+}
+
+ul{
+    border: 1px solid blue;
+    margin: 5px;
+}
+
+ul a{
+    color: magenta;
+}
+
+#unique-ul * {
+    color: orange;
+}
+
+.animals ul p  {
+    color: black;
+    border: none;
+    background-color: unset;
+}
+
+#unique-ul li:nth-of-type(3) {
+    color: white;
+    background-color: black;
+}
+
+#id-heading {
+    color: green;
+}
+
+.class-heading {
+    color: deeppink;
+}
+
+h3 {
+    color: blue;
+}
+
+.other-class {
+    color: #225560;
+    background-color: rgba(75, 16, 182, 0.5);
+    border-radius: 18px;
+    border: 3px solid black;
+}
+
+p:hover {
+    background-color: orangered;
+}
+
+a:visited {
+    background-color: darkgreen;
+}
+

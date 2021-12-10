@@ -4,7 +4,33 @@ line
 comment
 */
 
+body {
+    background-color: grey;
+    background-image: url("../assets/CodeupChevron.jpeg");
+    background-size: 50% 50%;
+    font-family: 'Calligraffitti', cursive;
+}
+
 .fancy-header {
-    color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2 {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+li {
+    list-style: armenian;
+}
+
+table {
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 26px;
+}
+
+a:hover {
+    color: darkcyan;
 }
