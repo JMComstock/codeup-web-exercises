@@ -1,0 +1,56 @@
+* {
+    background-color: lightsteelblue;
+}
+
+.container {
+    height: 150px;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border: 2px solid gold;
+}
+
+#one {
+    float: left;
+    background-color: #02394A;
+}
+
+#two {
+    float: right;
+    background-color: #043565;
+}
+
+#three {
+    float: left;
+    background-color: #5158BB;
+}
+
+#four {
+    float: right;
+    background-color: #F26DF9;
+}
+
+#p1 {
+    float: right;
+}
+
+#p2 {
+    float: left;
+}
+
+#p3 {
+    float: right;
+}
+
+#p4 {
+    float: left;
+}
+
+
+
+
