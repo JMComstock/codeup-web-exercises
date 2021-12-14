@@ -1,3 +1,69 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Document</title>-->
+<!--    <link rel="stylesheet" href="../css/flexbox-lecture.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--&lt;!&ndash;        <div class="box" id="one">one</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="box" id="two">two</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="box" id="three">three</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="box" id="four">four</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">five</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">six</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">seven</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">eight</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">nine</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">ten</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">eleven</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="box">twelve</div>&ndash;&gt;&ndash;&gt;-->
+
+<!--    -->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Flexbox Basics Examples</title>-->
+<!--    <style>-->
+<!--        * {-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+<!--        body {-->
+<!--            margin: 0;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+<!--        .flex-container {-->
+<!--            width: 100%;-->
+<!--            border: 3px solid goldenrod;-->
+<!--            display: flex;-->
+<!--        }-->
+<!--        .flex-item {-->
+<!--            background: #BFD45D;-->
+<!--            border: 2px solid #F9EFD6;-->
+<!--            padding: 1em;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="flex-container">-->
+<!--        <div class="flex-item">Item 1</div>-->
+<!--        <div class="flex-item">Item 2</div>-->
+<!--        <div class="flex-item">Item 3</div>-->
+<!--        <div class="flex-item">Item 4</div>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,22 +72,109 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/flexbox-lecture.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav_section {
+            display: flex;
+            width: 100%;
+        }
+        .nav_section > * {
+            padding: 2px 4px;
+            background-color: lightgrey;
+        }
+        .nav_item:hover {
+            background: cornflowerblue;
+            cursor: pointer;
+            transition: 500ms;
+        }
+        .nav_item {
+            transition: 250ms;
+        }
+        .nav_item > a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box" id="one">one</div>
-        <div class="box" id="two">two</div>
-        <div class="box" id="three">three</div>
-        <div class="box" id="four">four</div>
-<!--        <div class="box">five</div>-->
-<!--        <div class="box">six</div>-->
-<!--        <div class="box">seven</div>-->
-<!--        <div class="box">eight</div>-->
-<!--        <div class="box">nine</div>-->
-<!--        <div class="box">ten</div>-->
-<!--        <div class="box">eleven</div>-->
-<!--        <div class="box">twelve</div>-->
-    </div>
+
+    <nav>
+        <div class="nav_section">
+            <div class="nav_item">Home</div>
+            <div class="nav_item">News</div>
+            <div class="nav_item"><a href="https://codeup.com">Codeup</a></div>
+
+            <div class="nav_section" style="flex-grow: 1;"></div>
+            <div class="nav_item">About</div>
+        </div>
+
+    </nav>
+    <main>
+
+        <style>
+            .card {
+                width: 200px;
+                height: 300px;
+                border: solid orange 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .card_name {
+                text-align: center;
+                font_weight: bold;
+            }
+
+            .card_title {
+                text-align: center;
+                color: grey;
+            }
+
+            .card  img {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+
+            .card_footer > img{
+                width: 40px;
+                height: 40px;
+            }
+
+            .card hr {
+                width: 60%;
+            }
+
+        </style>
+
+        <div class="card">
+            <div class="card_content">
+                <img src="../assets/ron-swanson.jpeg" alt="Ron Swanson Image">
+                <div class="card_name">Ron Swanson</div>
+                <div class="card_title">Director</div>
+                <hr>
+            </div>
+
+
+            <div class="card_footer">
+                <img src="../assets/GitHub-Mark.jpeg" alt="github logo">
+                <img src="../assets/GitHub-Mark.jpeg" alt="github logo">
+                <img src="../assets/GitHub-Mark.jpeg" alt="github logo">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
 </body>
 </html>

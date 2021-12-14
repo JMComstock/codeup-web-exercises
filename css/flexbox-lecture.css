@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
 }
 
 .box {
@@ -21,7 +22,7 @@
     /*flex-grow: 4;*/
 }
 #one {
-    align-self: flex-end;
+    align-self: flex-start;
     /*flex-shrink: 2;*/
 }
 #two {
