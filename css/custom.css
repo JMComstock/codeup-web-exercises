@@ -11,3 +11,9 @@ body {
     opacity: 60%;
     text-align: center;
 }
+
+#cart-image {
+    height: 25px;
+    width:auto;
+    filter: invert(100%);
+}
