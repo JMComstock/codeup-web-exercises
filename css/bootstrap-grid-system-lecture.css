@@ -1,0 +1,12 @@
+.container {
+    border: 1px solid midnightblue;
+}
+
+.row {
+    border: 1px solid darkslateblue;
+}
+
+.col-sm , .col-lg, .col, .col-3, .col-6, .myBorder {
+    border: 2px solid black;
+    background-color: lightgrey;
+}
