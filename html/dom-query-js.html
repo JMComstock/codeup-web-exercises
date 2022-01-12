@@ -50,7 +50,14 @@
         }
 
         // TODO: Set text color on every other list item to grey
+        var listItems = document.getElementsByTagName('li');
 
+        for (var i = 0; i < listItems.length; i++) {
+            var dbId = listItems[i].getAttribute("data-dbid");
+            if(dbId % 2 === 0) {
+                listItems[i].style.color = 'grey';
+            }
+        }
 
         // TODO: Set text color of li with dbid = 1 to blue
         var liElement = document.getElementsByTagName('li')[0];
@@ -61,8 +68,9 @@
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerHTML = "Mission Accomplished!";
+        subParagraphs[0].innerHTML = "Mission Accomplished!";
         console.log(subParagraphs.innerHTML);
+
     })();
 </script>
 </body>

@@ -49,10 +49,10 @@ for(var i=0; i< myElements.length; i++) {
 // 2. retrieve the input value
 // 2a. object notation to retrieve that value
 
-var userInput = document.forms.login.username;
-console.log(userInput);
-var inputVal = userInput.value;
-console.log(userInput);
+// var userInput = document.forms.login.username;
+// console.log(userInput);
+// var inputVal = userInput.value;
+// console.log(userInput);
 
 // LET'S CHANGE THE COLOR OF MY H1 TAG TO PURPLE
 // 1. access the element we want to change
