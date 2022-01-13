@@ -35,7 +35,7 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById("main-header");
+        var mainHeader = document.getElementById("main-header");
         // console.log(mainHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
@@ -56,14 +56,13 @@
         }
 
         // TODO: Set text color on every other list item to grey
-        var listItems = document.getElementsByTagName('li');
 
-        // for (var i = 0; i < listItems.length; i++) {
-        //     var dbId = listItems[i].getAttribute("data-dbid");
-        //     if(dbId % 2 === 0) {
-        //         listItems[i].style.color = 'grey';
-        //     }
-        // }
+        for (var i = 0; i < listItems.length; i++) {
+            // var dbId = listItems[i].getAttribute("data-dbid");
+            if(i % 2 === 0) {
+                listItems[i].style.color = 'grey';
+            }
+        }
 
         // TODO: Set text color of li with dbid = 1 to blue
         var liElement = document.getElementsByTagName('li')[0];
@@ -76,8 +75,10 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // subParagraphs[0].innerHTML = "Mission Accomplished!";
 
+
         // TODO: Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place.
-        //  TODO: the first button should set inner html of mainHeader to "JavaScript is Cool".
+
+        // TODO: the first button should set inner html of mainHeader to "JavaScript is Cool".
         var changeHeader = function (event) {
             mainHeader.innerHTML = "JavaScript is Cool";
         }
@@ -93,8 +94,8 @@
 
         var everyOther = function (event) {
             for (var i = 0; i < listItems.length; i++) {
-                var dbId = listItems[i].getAttribute("data-dbid");
-                if(dbId % 2 === 0) {
+                // var dbId = listItems[i].getAttribute("data-dbid");
+                if(i % 2 === 0) {
                     listItems[i].style.color = 'grey';
                 }
             }
