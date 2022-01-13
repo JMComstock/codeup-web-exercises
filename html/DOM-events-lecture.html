@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Events</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <p id="orange">Table of Contents</p>
+    <button id="btn">change hello world</button>
+    <button id="dark-mode">dark-mode</button>
+    <h2 id="change-me">THIS IS AWESOME!!</h2>
+
+    <script>
+        (function () {
+
+        // TODO: change background color of table of contents element to orange
+        // 1. identify which elements we want listening for an event
+        // 2. retrieve the element we want
+        // 3. add event listener to the element from step 2
+        // 4. identify what even the element should be listening for ... WHAT IS THE EVENT? --> "click
+        // 5. add a function that triggers when the event happens
+        // 6. inside of the listener function, what change do we want to make? (bg-color: orange)
+        // 7. identify which element we want to change the color of
+        // 8. change color using style property to re-assign its value to orange
+
+            let el = document.getElementById("orange");
+
+            el.addEventListener("click", function() {
+                el.style.backgroundColor = "orange";
+            })
+
+
+        // TODO: change the color of hello world to pink when we click on the button
+            // 1. define the hello world element (element that will change on click)
+            // 2. define the button that will be listening for the click
+            // 3. add the event listener to the button (addEventListener())
+            // 4. define  what event is being listened for ("click")
+            // 5. actually change the color of hello world (style.color = "pink")
+
+            let helloWorld =document.getElementsByTagName("h1")[0];
+            console.log(helloWorld);
+
+            let btn = document.getElementById("btn");
+            console.log(btn);
+
+            btn.addEventListener("click", function() {
+                helloWorld.style.color = "pink";
+            })
+
+            // DARK MODE
+            document.getElementById("dark-mode").addEventListener("click", function () {
+                document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+                document.getElementsByTagName("body")[0].style.color = "green";
+
+                // document.getElementsByTagName("body")[0].setAttribute("style","background-color: black; color: green;");
+            })
+
+            function changeTextSize() {
+                this.style.color = "red";
+            }
+            function changeBackgroundColor() {
+                this.style.backgroundColor = "green";
+            }
+
+            // REMOVE EVENT LISTENER
+            let h2 = document.getElementById("change-me");
+            h2.addEventListener("mouseover", changeTextSize);
+            h2.removeEventListener("mouseover", changeTextSize);
+
+
+        })();
+    </script>
+</body>
+</html>
