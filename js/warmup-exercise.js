@@ -5,8 +5,5 @@
 
 let arrayToFilter = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"];
 
-arrayToFilter.forEach(name => console.log(name));
-if(name.length < 4 || name.length > 4) {
-    arrayToFilter.delete(name);
-}
-console.log(arrayToFilter);
+let result = arrayToFilter.filter(word => word.length === 4);
+console.log(result);
