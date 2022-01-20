@@ -131,3 +131,29 @@
 //     $("*").css({"background-color":"darkblue", "color":"white"});
 // })
 
+// when hovering over a li, change the background color to light blue,
+// when you hover out of it, change background color to lightgreen
+
+// - identify the element(li)
+// - hover event
+// - function for event (hover on)
+// --> change bg color to blue
+// function for event (hover off)
+// --> change the g color to green
+
+let onHover = function () {
+    $(this).css("background-color" ,"lightblue");
+}
+let offHover = function () {
+    $(this).css("background-color", "lightgreen");
+}
+
+// $("li").hover(function () {
+//     $(this).css("background-color" ,"lightblue");
+// }, function () {
+//     $(this).css("background-color", "lightgreen");
+// });
+
+$("li").hover(onHover, offHover);
+
+$("#heading").hover(onHover, offHover);
