@@ -70,3 +70,64 @@
 // .css("property", "value") // accepts two parameters
 // .val()
 // .text(optionalParam)
+
+
+
+// EVENT LISTENERS
+//DOM
+// select -> add event listener --> tell it which event listernet to listen for --> here;s the funtction to run when event happens
+//
+// document.getElementById("heading")
+//     .addEventListener("click", function () {
+//     console.log("clicked by DOM");
+// })
+
+// jQuery
+// $("#heading").click(function () {
+//     console.log("clicked by jQuery");
+// })
+
+// when the first paragraph gets clicked on,
+// let it create a border around the second paragraph
+// 1 el) listening for the event
+// 2 el) what's being affected by the event
+
+// - call the first paragraph element
+// - create the click event
+// - make the function you want to execute
+// - call the element that needs to be changed (2nd paragraph)
+// - do the actual thing we want to happen (create a border)
+
+// $("#p-one").click(function () {
+//     $("#p-two").css("border", "1px solid purple");
+// })
+
+// let's put this things into variable to make it a bit cleaner
+// - p1
+// - function
+// - p2
+//  css value
+
+// let p1 = $("#p-one");
+// let p2 = $("#p-two");
+// let cssVal = "3px dotted purple "
+// let purpleBorder = function () {
+//     p2.css("border", cssVal);
+// }
+//
+// p1.click(purpleBorder);
+
+// DOUBLE CLICK
+// - find element that I'm going to work on
+// - give element an id
+// - put it into variables
+// - create a function
+// - when button is double clicked, change background dark color, change text to light color
+// - select element that will be changed
+
+// let myBtn = $("#my-button");
+//
+// myBtn.dblclick(function () {
+//     $("*").css({"background-color":"darkblue", "color":"white"});
+// })
+

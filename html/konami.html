@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konami Code</title>
+    <style>
+        html {
+            background-image: url("../assets/img/contra.jpeg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: white;">Konami Code</h1>
+
+<script src="../js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        if(event.keyCode === (38 && 38 && 40 && 40 && 37 && 39 && 37 && 39 && 66 && 65 && 13)) {
+            alert("You have 30 extra lives!");
+        }
+    });
+
+    // let cheatCode = [];
+    // let keyToPress = [3838404037393739666513];
+    // switch (cheatCode === keyToPress) {
+    //     case 38:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     case 40:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     case 37:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     case 39:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     case 66:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     case 65:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     case 13:
+    //         cheatCode.push();
+    //         console.log(cheatCode);
+    //         break;
+    //     default :
+    //         if(cheatCode === keyToPress) {
+    //             alert("You have 30 extra lives!");
+    //         }
+    // }
+
+
+</script>
+</body>
+</html>
