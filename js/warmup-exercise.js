@@ -20,7 +20,7 @@ while (i <= stringToFiler.length - 1){
     character = stringToFiler.charAt(i);
     if (!character.match(/[A-Za-z]/i)){
         console.log(character + " is not a character");
-    }else{
+    } else {
         if (character === character.toUpperCase()) {
            console.log("letter " + character + " is uppercase");
         }
