@@ -18,7 +18,7 @@ let i=0;
 let character='';
 while (i <= stringToFiler.length - 1){
     character = stringToFiler.charAt(i);
-    if (!character.match(/[a-z]/i)){
+    if (!character.match(/[A-Za-z]/i)){
         console.log(character + " is not a character");
     }else{
         if (character === character.toUpperCase()) {
