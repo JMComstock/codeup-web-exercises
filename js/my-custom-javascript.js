@@ -6,7 +6,8 @@
 //
 // });
 
-
+//
+// console.log("hello world");
 let contents = $("#h1-id").html();
 alert(contents);
 
@@ -17,7 +18,10 @@ $('.codeup').css('border', '1px solid red');
 $("li").css("font-size", "20px");
 
 // Craft selectors that highlight all the h1, p, and li elements.
-$("h1, p, li").effect("highlight", {color:"#669966"}, 5000);
+$(document).ready(function() {
+    $("h1, li, p").effect( "highlight", {color:"#669966"}, 3000 );
+});
+
 
 // Create a jQuery statement to alert the contents of your h1 element(s).
 let newAlert = $("h1").html();
