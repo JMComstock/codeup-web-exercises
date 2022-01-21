@@ -25,10 +25,19 @@
 
     $(document).keyup(function(event){
         console.log(event.keyCode);
-        if(event.keyCode === (38 && 38 && 40 && 40 && 37 && 39 && 37 && 39 && 66 && 65 && 13)) {
-            alert("You have 30 extra lives!");
-        }
+        // if(event.keyCode === (38 && 38 && 40 && 40 && 37 && 39 && 37 && 39 && 66 && 65 && 13)) {
+        //     alert("You have 30 extra lives!");
+        // }
+        let predefinedSequence = ['3838404037393739666513'];
+        let userSequence = [];
+
+        event.keyCode.on('keyup', function() {
+            event.keyCode.push(userSequence)
+        });
     });
+
+
+
 
 </script>
 </body>
