@@ -141,12 +141,12 @@
 // function for event (hover off)
 // --> change the g color to green
 
-let onHover = function () {
-    $(this).css("background-color" ,"lightblue");
-}
-let offHover = function () {
-    $(this).css("background-color", "lightgreen");
-}
+// let onHover = function () {
+//     $(this).css("background-color" ,"lightblue");
+// }
+// let offHover = function () {
+//     $(this).css("background-color", "lightgreen");
+// }
 
 // $("li").hover(function () {
 //     $(this).css("background-color" ,"lightblue");
@@ -154,6 +154,7 @@ let offHover = function () {
 //     $(this).css("background-color", "lightgreen");
 // });
 
-$("li").hover(onHover, offHover);
+// $("li").hover(onHover, offHover);
+//
+// $("#heading").hover(onHover, offHover);
 
-$("#heading").hover(onHover, offHover);
