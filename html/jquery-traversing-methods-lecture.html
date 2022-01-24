@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #pink {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <section id="first">
+        <div>
+            <img style="height: 50px; width: 50px"  src="../assets/img/pizza.png" alt="">
+        </div>
+        <div>
+            <img style="height: 50px; width: 50px"  src="../assets/img/pixel-pizza.jpeg" alt="">
+        </div>
+    </section>
+    <section>
+        <ul>
+            <li>item</li>
+            <li id="pink">item</li>
+            <li>item</li>
+        </ul>
+    </section>
+
+    <script src="../js/jquery-2.2.4.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // console.log($("#pink").next());
+            // $("#pink").next().css("border", "1px solid black");
+
+
+            // grab the element first
+            // children
+
+            // $("#first").children().children().css("border", "1px solid red");
+
+            // $("#first:nth-child(1)").css("border", "1px solid red");
+
+            // $("#first").children(":nth-child(2)").children().css("border", "1px solid red");
+
+            // $("#pink").next().css("border", "2px solid red");
+
+            // console.log($("li"));
+            // $("li").each(function (index) {
+            //     if(index % 2 === 0) {
+            //         $(this).css("font-size", "24px");
+            //     }
+            // })
+
+            // reducer
+
+            const array1 = [1,2,3,4];
+            cont reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+            // 1 + 2 + 3 + 4
+            console.log(arra1.reduce(reducer));
+            // expected output: 10
+
+            // 5 + 1 + 2 + 3 + 4
+            console.log(array1.reduce(reducer,5));
+            // expected output: 15
+
+            // .first() --> end of the array of elements(jquery obj)
+            // .last() end --> 0
+
+        });
+
+    </script>
+</body>
+</html>
