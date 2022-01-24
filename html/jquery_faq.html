@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>National Park FAQ's</title>
     <style>
         .container {
@@ -15,78 +16,16 @@
         .invisible {
             visibility: hidden;
         }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
+        .yellow {
+            background-color: yellow;
         }
 
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-
-        input:checked + .slider {
-            background-color: #2196F3;
-        }
-
-        input:focus + .slider {
-            box-shadow: 0 0 1px #2196F3;
-        }
-
-        input:checked + .slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-
-        /* Rounded sliders */
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="top d-flex col">
-            <h2>Hide FAQ's</h2>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
-        </div>
+
         <h1>National Park FAQ's</h1>
         <dl>
             <dt>Who is the director of the National Park Service?</dt>
@@ -138,15 +77,17 @@
 
             <dt>What is the National Park Service budget?</dt>
             <dd class="invisible">
-                <li>Fiscal Year (FY) 2014 Enacted: $2.98 billion</li>
-                <li>FY 2015 Enacted: $2.615 billion</li>
-                <li>FY 2016 Enacted:$2.851 billion</li>
-                <li>FY 2017 Enacted: $2.932 billion</li>
+                <ul>
+                    <li>Fiscal Year (FY) 2014 Enacted: $2.98 billion</li>
+                    <li>FY 2015 Enacted: $2.615 billion</li>
+                    <li>FY 2016 Enacted:$2.851 billion</li>
+                    <li>FY 2017 Enacted: $2.932 billion</li>
+                </ul>
             </dd>
         </dl>
         
         <div class="unordered">
-            <h3 id="national-parks-heading">National Parks</h3>
+            <h3 id="national-parks-heading yellow">National Parks</h3>
             <ul id="national-parks">
                 <li>Arches</li>
                 <li>Badlands</li>
@@ -154,7 +95,7 @@
                 <li>Denali</li>
                 <li>Everglades</li>
             </ul>
-            <h3>State Parks of Texas</h3>
+            <h3 class="yellow">State Parks of Texas</h3>
             <ul id="state-parks-texas">
                 <li>Abilene</li>
                 <li>Big Bend</li>
@@ -162,7 +103,7 @@
                 <li>Davis Mountains</li>
                 <li>Enchanted Rock</li>
             </ul>
-            <h3>State Parks of New York</h3>
+            <h3 class="yellow">State Parks of New York</h3>
             <ul id=state-parks-new-york">
                 <li>Letchworth State Park</li>
                 <li>Niagara Falls</li>
@@ -170,23 +111,40 @@
                 <li>Hudson River Valley</li>
                 <li>Rockefeller State Park Preserve</li>
             </ul>
-            <button>Click me to change backgrounds</button>
+            <button class="btn btn-warning">Yellow background on li</button>
+            <button class="btn btn-dark"> Toggle Hiding FAQ's</button>
         </div>
+<!--        <div class="yellow">-->
+<!--            <button class="btn btn-dark"> Toggle Hiding FAQ's</button>-->
+<!--        </div>-->
     </div>
 
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <script>
         "use strict";
 
         $(document).ready(function() {
 
-            $('.switch').click(function(event) {
+            $('.btn-dark').click(function(event) {
                 event.preventDefault();
                 $("dl dd").toggleClass('invisible');
             });
 
+            //TODO: Create a button that, when clicked, makes the last li in each ul have a yellow background.
+            $(".btn-warning").click(function (event) {
+                event.preventDefault();
+                $("ul").children("li:last-child").toggleClass('yellow');
+            });
+
+            //TODO:When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+            $("h3").click(function (event) {
+                event.preventDefault();
+                ("h3").siblings().css("font-weight:bold");
+            })
 
 
         });
