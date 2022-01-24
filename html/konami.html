@@ -25,22 +25,26 @@
 
     $(document).keyup(function(event){
         console.log(event.keyCode);
-        let cheatCode = ['3838404037393739666513'];
-        let userSequence = [];
-        $(document).keyup( (e) => {
-            userSequence.push(event.keyCode);
-            userSequence.splice(-cheatCode.length-1, userSequence.length - cheatCode.length);
-
-            if (userSequence.join('').includes(cheatCode)) {
-                alert("You have 30 extra lives!");
-            }
-        })
-
     })
 
+    let cheatCode = '3838404037393739666513';
+    let userSequence = [];
+    $(document).keyup( (e) => {
+
+        userSequence.push(event.keyCode);
+        userSequence.splice(cheatCode.length-1, userSequence.length - cheatCode.length);
+
+        if (userSequence.join('').includes(cheatCode)) {
+            alert("You have 30 extra lives!");
+        }
 
 
-
+        let audioElement = new Audio("../assets/audio/puppiness.mp4");
+        $("body").hover(function () {
+            audioElement.volume = 1;
+            audioElement.play();
+        });
+    })
 </script>
 </body>
 </html>
