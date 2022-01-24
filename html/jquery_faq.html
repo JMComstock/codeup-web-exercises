@@ -19,6 +19,12 @@
         .yellow {
             background-color: yellow;
         }
+        .font-weight {
+            font-weight: bold;
+        }
+        .blue {
+            color: blue;
+        }
 
 
     </style>
@@ -29,7 +35,7 @@
         <h1>National Park FAQ's</h1>
         <dl>
             <dt>Who is the director of the National Park Service?</dt>
-            <dd class="invisible ">Charles F. "Chuck" Sams III is the Director of the National Park Service</dd>
+            <dd class="invisible">Charles F. "Chuck" Sams III is the Director of the National Park Service</dd>
 
             <br>
 
@@ -88,14 +94,14 @@
         
         <div class="unordered">
             <h3 id="national-parks-heading yellow">National Parks</h3>
-            <ul id="national-parks">
+            <ul id="national-parks blue">
                 <li>Arches</li>
                 <li>Badlands</li>
                 <li>Carlsbad Caverns</li>
                 <li>Denali</li>
                 <li>Everglades</li>
             </ul>
-            <h3 class="yellow">State Parks of Texas</h3>
+            <h3>State Parks of Texas</h3>
             <ul id="state-parks-texas">
                 <li>Abilene</li>
                 <li>Big Bend</li>
@@ -103,7 +109,7 @@
                 <li>Davis Mountains</li>
                 <li>Enchanted Rock</li>
             </ul>
-            <h3 class="yellow">State Parks of New York</h3>
+            <h3>State Parks of New York</h3>
             <ul id=state-parks-new-york">
                 <li>Letchworth State Park</li>
                 <li>Niagara Falls</li>
@@ -114,9 +120,6 @@
             <button class="btn btn-warning">Yellow background on li</button>
             <button class="btn btn-dark"> Toggle Hiding FAQ's</button>
         </div>
-<!--        <div class="yellow">-->
-<!--            <button class="btn btn-dark"> Toggle Hiding FAQ's</button>-->
-<!--        </div>-->
     </div>
 
 
@@ -143,10 +146,14 @@
             //TODO:When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
             $("h3").click(function (event) {
                 event.preventDefault();
-                ("h3").siblings().css("font-weight:bold");
+                $("ul").children().toggleClass("font-weight");
+            });
+
+            //TODO:When any list item is clicked, first li of the parent ul should have a font color of blue.
+            $("li").click(function (event) {
+                event.preventDefault();
+                $("ul").children(":nth-child(1)").toggleClass("blue");
             })
-
-
         });
     </script>
 </body>
