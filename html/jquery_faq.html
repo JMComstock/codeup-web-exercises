@@ -25,12 +25,14 @@
         .blue {
             color: blue;
         }
-
+        .card {
+            border: 5px solid black;
+        }
 
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container justify-content-center mb-3">
 
         <h1>National Park FAQ's</h1>
         <dl>
@@ -120,7 +122,36 @@
             <button class="btn btn-warning">Yellow background on li</button>
             <button class="btn btn-dark"> Toggle Hiding FAQ's</button>
         </div>
+
+        <section class="d-flex justify-content-around mt-5">
+            <div class="row justify-content-md-around">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/mountainWaterfall.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Yosemite Falls</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/rockFormations.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Arches National Park</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../assets/img/tallTrees.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Sequoia National Park</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="d-flex justify-content-around mt-5">
+            <button id="left">Press</button>
+            <button id="middle">Press</button>
+            <button id="right">Press</button>
+        </div>
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -153,8 +184,27 @@
             $("li").click(function (event) {
                 event.preventDefault();
                 $("ul").children(":nth-child(1)").toggleClass("blue");
-            })
+            });
+
+            // BONUS
+            // TODO: Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame. Use the traversing functions of jQuery to accomplish this.
+
+            // TODO: The left frame swaps to the right and takes the image from the frame in the center.
+
+            // TODO: The center frame swaps randomly to either the left or right.
+
+            // TODO: The right frame swaps to the left and takes the image from the frame in the center.
+
         });
     </script>
 </body>
 </html>
+
+
+<!--Bonus-->
+<!--Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame. Use the traversing functions of jQuery to accomplish this.-->
+<!--The rules are the following:-->
+
+<!--The left frame swaps to the right and takes the image from the frame in the center.-->
+<!--The center frame swaps randomly to either the left or right.-->
+<!--The right frame swaps to the left and takes the image from the frame in the center.-->
