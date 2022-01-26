@@ -28,8 +28,7 @@
 // $.ajax("https://dog.ceo/api/breeds/image/random"); // jquery syntax for AJAX GET method
 
 $(document).ready(function () {
-
-    // console.log("ready");
+    console.log("ready");
     // console.log($.ajax("https://dog.ceo/api/breeds/image/random")); // GET
     //
     // console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
@@ -108,18 +107,18 @@ $(document).ready(function () {
     //
     //     });
 
-    $.ajax("https://dog.ceo/api/breeds/image/random") // sends a get request
-        .fail(function () {
-            $("h2").html("SORRY YOUR REQUEST FAILED");
-            console.log("sorry yom your request failed!");
-        })
-        .always(function () {
-            $("h3").html("thanks for visiting!")
-        })
-        .done(function (data, status) {
-            $("img").attr("src", data.message);
-            $("p").html(status);
-        })
+    // $.ajax("https://dog.ceo/api/breeds/image/random") // sends a get request
+    //     .fail(function () {
+    //         $("h2").html("SORRY YOUR REQUEST FAILED");
+    //         console.log("sorry yom your request failed!");
+    //     })
+    //     .always(function () {
+    //         $("h3").html("thanks for visiting!")
+    //     })
+    //     .done(function (data, status) {
+    //         $("img").attr("src", data.message);
+    //         $("p").html(status);
+    //     })
 
     // console.log("imgStr: " + imgStr);
 
@@ -127,28 +126,64 @@ $(document).ready(function () {
     // .FAIL --> Triggers the callback function only if fail
     // .ALWAYS --> triggers the callback function on success or fail
 
-    $.ajax("https://dog.ceo/api/breeds/image/random", {
-        type: "POST",
-        data: {
-            message: "hello this is your message"
-        }
-    })
-        .done(function (data, staatus) {
-            console.log('request successful')
-        })
-        .fail(function () {
-            console.log("request failed")
-        })
-        .always(function () {
-            console.log("woohoo we're making requests")
-        })
+    // $.ajax("https://dog.ceo/api/breeds/image/random", {
+    //     type: "POST",
+    //     data: {
+    //         message: "hello this is your message"
+    //     }
+    // })
+    //     .done(function (data, staatus) {
+    //         console.log('request successful')
+    //     })
+    //     .fail(function () {
+    //         console.log("request failed")
+    //     })
+    //     .always(function () {
+    //         console.log("woohoo we're making requests")
+    //     })
 
     //get
-    $.get("")
-    $.ajax("url")
+    // $.get("")
+    // $.ajax("url")
 
     //post
-    $.post()
-    $.ajax("url", options)
+    // $.post()
+    // $.ajax("url", options)
+
+    // MORE AJAX
+
+    // -- posts https://jsonplaceholder.typicode.com/comments
+
+    // - get the url - using an AJAX request
+    // - loop through the array of data
+    // get actual names of the comments
+    // .done() method -- to capture the data when it's returned
+    // append to element
+    // select or find the element that we want to append to
+    // create an element
+
+    $.get("https://jsonplaceholder.typicode.com/posts")
+        .done(function (data) {
+            console.log(data); // confirm if the data is an object or an array
+            // here we have access to the data returned
+
+            // loop through data returned (an array from console.logging it)
+            $.each(data, function (i, comment) {
+                console.log(comment.title);
+
+                //select element we're appending to,
+                // append going to add whatever we pass in as child
+                // lements to the element selected
+                let newEl = document.createElement("h1");
+                let title = comment.title;
+                newEl.innerHTML= title;
+                $(".container").append(newEl);
+            })
+        })
+
+    // .ajax(url, options) // by default - GET || specifiy TYPE
+    // in the options
+    // .get(url) --> GET only
+    // .post(url, options)
 
 })
