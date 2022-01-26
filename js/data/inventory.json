@@ -33,5 +33,22 @@
       "tool"
     ],
     "price": 10
+  },
+  {
+    "title": "Wrench",
+    "quantity": 10,
+    "categories": [
+      "tool"
+    ],
+    "price": 200
+  },
+  {
+    "title": "Nails",
+    "quantity": 100,
+    "categories": [
+      "tool",
+      "outdoor"
+    ],
+    "price": 10
   }
 ]
