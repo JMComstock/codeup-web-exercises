@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .color {
+            background-color: red;
+        }
+        .hideMe {
+            visibility: hidden;
+        }
+        .body {
+            background-color: #0B4F6C;
+        }
+    </style>
+</head>
+<body id="body">
+    <button id="backGround">background Color</button>
+    <br>
+    <br>
+    <button id="colorMe">paragraph color</button>
+    <br>
+    <br>
+    <button id="hideMe">hidden text</button>
+    <p class="bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+    <script src="../js/jquery-2.2.4.js"></script>
+
+    <script>
+        //TODO:when you click on a button, change background color
+        let bodyBackground = $("#body");
+        let listerner0 = $("#backGround");
+        listerner0.click(function () {
+            console.log("clicked");
+            bodyBackground.toggleClass("body");
+        })
+
+        //TODO:when page loads create an alert
+
+        $(document).ready(function () {
+            alert("The page loaded!");
+        })
+
+        //TODO:toggle the font size from small to large and back to small when you click on the element
+        // element we are trying to change
+        // element we click on to make changes
+        // what event is going to be listened for
+        // what happens after the event happens
+        // handle the toggle
+        // toggleClass
+        // add css to the class we're toggling
+
+        let changeMe = $(".bg");
+        let listerner1 = $("#colorMe");
+        listerner1.click(function () {
+            console.log("clicked");
+            changeMe.toggleClass("color");
+        })
+
+        //TODO: make the paragraph disappear when you click the paragraph
+
+        let disappearMe = $(".bg");
+        let listerner2 = $("#hideMe");
+        listerner2.click(function () {
+            console.log("clicked");
+            disappearMe.toggleClass("hideMe");
+        })
+
+
+    </script>
+</body>
+</html>
