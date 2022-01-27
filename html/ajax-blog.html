@@ -10,9 +10,9 @@
 </head>
 <body class="bg-secondary">
 <h1 class="d-flex justify-content-center">AJAX BLOG POSTS</h1>
-    <div class="container justify-content-center">
+    <div class="container d-flex justify-content-center">
         <div class="d-flex ">
-            <div id="posts"  class="col justify-content-center">
+            <div id="posts"  class="col">
 
             </div>
         </div>
@@ -31,11 +31,11 @@
                     console.log(blog.date);
 
                     let blogPosts =`
-                        <div className="card" class="border mt-3" style="width: 18rem;">
+                        <div className="card" class="border mt-3 p-2" style="width: 18rem;">
                             <div className="card-body">
                                 <p className="card-text" class="title">${blog.title}</p>
                                 <p className="card-text" class="content">${blog.content}</p>
-                                <p className-"card-text" class="date">${blog.date}</p>
+                                <p className="card-text" class="date">${blog.date}</p>
                             </div>
                         </div>`;
                     $("#posts").append(blogPosts);
