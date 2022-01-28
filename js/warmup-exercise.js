@@ -37,10 +37,13 @@
 
 let input1 = "42958372";
 let input2 = "917485";
+let input3 = "8763982767"
 let arr1 = input1.split('');
 let arr2 = input2.split('');
+let arr3 = input3.split('');
 let numArr1 = [];
 let numArr2 = [];
+let numArr3 = [];
 arr1.forEach(num => {
     num = Number(num);
     numArr1.push(num);
@@ -53,6 +56,12 @@ arr2.forEach(num => {
 })
 console.log(numArr2);
 
+arr3.forEach(num => {
+    num = Number(num);
+    numArr3.push(num);
+})
+console.log(numArr3);
+
 // Using reduce function to find the sum
 let sum = numArr1.reduce(function (x,y) {
     return x + y;
@@ -61,7 +70,12 @@ let sum = numArr1.reduce(function (x,y) {
 let sum2 = numArr2.reduce(function (x,y) {
     return x + y;
 }, 0)
+
+let sum3 = numArr3.reduce(function (x, y) {
+    return x + y;
+}, 0)
 //
 // document.write("Sum using Reduce method: " + sum);
 console.log("The sum of input1 is: " + sum);
 console.log("The sum of input2 is: " + sum2);
+console.log("The sum of input3 is: " + sum3);
