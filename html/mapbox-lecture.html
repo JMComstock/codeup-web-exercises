@@ -38,24 +38,24 @@
             center: [-98.4916, 29.4252]
         });
 
-        let alamoInfo = {
-            address: "The Alamo",
-            popupHTML: "<p>Remember the Alamo!</p>"
-        };
+        // let alamoInfo = {
+        //     address: "The Alamo",
+        //     popupHTML: "<p>Remember the Alamo!</p>"
+        // };
 
-        function placeMarkerAndPopup(info, token, map) {
-            geocode(info.address, token).then(function(coordinates) {
-                let popup = new mapboxgl.Popup()
-                    .setHTML(info.popupHTML);
-                let marker = new mapboxgl.Marker()
-                    .setLngLat(coordinates)
-                    .addTo(map)
-                    .setPopup(popup);
-                popup.addTo(map);
-            });
-        }
+        // function placeMarkerAndPopup(info, token, map) {
+        //     geocode(info.address, token).then(function(coordinates) {
+        //         let popup = new mapboxgl.Popup()
+        //             .setHTML(info.popupHTML);
+        //         let marker = new mapboxgl.Marker()
+        //             .setLngLat(coordinates)
+        //             .addTo(map)
+        //             .setPopup(popup);
+        //         popup.addTo(map);
+        //     });
+        // }
 
-        placeMarkerAndPopup(alamoInfo, mapboxgl.accessToken, map);
+        // placeMarkerAndPopup(alamoInfo, mapboxgl.accessToken, map);
 
         // Create a new marker
         const marker = new mapboxgl.Marker({

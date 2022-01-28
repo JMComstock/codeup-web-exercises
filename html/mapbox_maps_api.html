@@ -1,65 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Map Marker Example</title>
-    <!-- Mapbox CSS -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Document</title>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-    <!-- Custom CSS -->
-    <style>
-        #map {
-            /* the width and height may be set to any size */
-            width: 100%;
-            height: 700px;
-        }
-    </style>
+
 </head>
 <body>
+    <div class="container">
+        <h1>City with my favorite restaurant</h1>
+        <div id='map'></div>
+    </div>
 
-<h1>My First Mapbox Map!</h1>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script src="../js/mapbox-geocoder-utils.js"></script>
+    <script>
+            mapboxgl.accessToken = "pk.eyJ1IjoiamFzb25jb21zdG9jazExIiwiYSI6ImNreXhlcjU0eTBoaTgydnFwYXV1OGowZnQifQ.SxA4XQBcNNIOs1h_XbomSw";
+            let map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v9',
+                zoom: 10,
+                center: [-98.4916, 29.4252]
+            });
 
-<!-- The HTML element that serves as the Mapbox container -->
-<div id='map'></div>
+            const marker = new mapboxgl.Marker({
+                color: "black",
+                draggable: true
+            })
+                .setLngLat([-98.4916, 29.4260])
+                .addTo(map);
 
-<!-- Mapbox JS -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
-<!-- Mapbox Geocoder Util Methods -->
-<script src="../js/mapbox-geocoder-utils.js"></script>
-
-<!-- Custom JS -->
-<script>
-
-    var accessToken = "pk.eyJ1IjoiamFzb25jb21zdG9jazExIiwiYSI6ImNreXhlcjU0eTBoaTgydnFwYXV1OGowZnQifQ.SxA4XQBcNNIOs1h_XbomSw";
-
-    mapboxgl.accessToken = accessToken;
-
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
-    });
-
-    var alamoInfo = {
-        address: "The Alamo",
-        popupHTML: "<p>Remember the Alamo!</p>"
-    };
-
-    function placeMarkerAndPopup(info, token, map) {
-        geocode(info.address, token).then(function(coordinates) {
-            var popup = new mapboxgl.Popup()
-                .setHTML(info.popupHTML);
-            var marker = new mapboxgl.Marker()
-                .setLngLat(coordinates)
-                .addTo(map)
-                .setPopup(popup);
-            popup.addTo(map);
-        });
-    }
-
-    placeMarkerAndPopup(alamoInfo, accessToken, map);
-
-</script>
+    </script>
 </body>
 </html>
