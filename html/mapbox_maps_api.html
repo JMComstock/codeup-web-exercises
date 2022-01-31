@@ -1,42 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
-    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
+    <!-- Custom CSS -->
+
+    <style>
+        #map {
+            height: 700px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>City with my favorite restaurant</h1>
-        <div id='map'></div>
-    </div>
+<style>
+    #marker1 {
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    #marker2 {
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    #marker3 {
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <script src="../js/mapbox-geocoder-utils.js"></script>
-    <script>
-            mapboxgl.accessToken = "pk.eyJ1IjoiamFzb25jb21zdG9jazExIiwiYSI6ImNreXhlcjU0eTBoaTgydnFwYXV1OGowZnQifQ.SxA4XQBcNNIOs1h_XbomSw";
-            let map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v9',
-                zoom: 10,
-                center: [-98.4916, 29.4252]
-            });
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
+</style>
 
-            const marker = new mapboxgl.Marker({
-                color: "red",
-                draggable: true
-            })
-                .setLngLat([-98.4916, 29.4260])
-                .addTo(map);
 
-    </script>
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<!-- Mapbox Geocoder Util Methods -->
+<script src="../js/mapbox-geocoder-utils.js"></script>
+<!-- keys.js -->
+<script src="../js/keys.js"></script>
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = "pk.eyJ1IjoiamFzb25jb21zdG9jazExIiwiYSI6ImNreXhlcjU0eTBoaTgydnFwYXV1OGowZnQifQ.SxA4XQBcNNIOs1h_XbomSw";
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 10,
+        center: [-73.993195, 40.758355]
+    });
+
+
+    // Create a new marker
+    const marker1 = new mapboxgl.Marker({
+        color: "black",
+        draggable: true
+    })
+        .setLngLat([-73.995, 40.7606])
+        .addTo(map);
+     console.log("The marker is at " + marker1);
+
+    const marker2 = new mapboxgl.Marker({
+        color: "black",
+        draggable: true
+    })
+        .setLngLat([-73.9868, 40.76164])
+        .addTo(map);
+    console.log("The marker is at " + marker2);
+
+    const marker3 = new mapboxgl.Marker({
+        color: "black",
+        draggable: true
+    })
+        .setLngLat([-73.99564, 40.753735])
+        .addTo(map);
+    console.log("The marker is at " + marker3);
+
+
+    // popups
+
+    const popup1 = new mapboxgl.Popup({ offset: 25 }).setText(
+        '"West Side Steakhouse"\n “Unpretentious neighborhood steak & seafood restaurant with a vibe that blends modern & traditional.” Location. 597 10th Avenue, New York, NY 10036'
+    );
+
+    const popup2 = new mapboxgl.Popup({ offset: 25 }).setText(
+        '"West End Bar & Grill"\n “Happening tavern drawing a pre-theater crowd for its selection of draft beers & elevated pub fare." Location. 813 8th Ave, New York, NY 10019'
+    );
+
+    const popup3 = new mapboxgl.Popup({ offset: 25 }).setText(
+        '"Hudson Station"\n "Sliders & other American gastropub bites served in a relaxed space with exposed brick & many TVs." Location. 440 9th Ave, New York, NY 10001'
+    );
+
+    // create DOM element for the marker
+    const el1 = document.createElement('div');
+    el1.id = 'marker1';
+
+    const el2 = document.createElement('div');
+    el2.id = 'marker2';
+
+    const el3 = document.createElement('div');
+    el3.id = 'marker3';
+
+    // using mapbox with geocode functionality
+
+    // the  geocode method from mapbox-geocoder-utils.js
+
+    geocode("597 10th Ave, New York, NY 10036", mapboxgl.accessToken).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+    });
+
+    geocode("813 8th Ave, New York, NY 10019", mapboxgl.accessToken).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+    })
+
+    geocode("440 9th Ave, New York, NY 10001", mapboxgl.accessToken).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+    })
+
+    geocode("400 W 42nd St, New York, NY 10036", mapboxgl.accessToken).then(function (result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+    })
+
+    // reverse geocode method from mapbox-geocoder-utils.js
+    reverseGeocode({lng: -73.995, lat: 40.7606}, mapboxgl.accessToken).then(function(results) {
+        // logs the address for The Alamo
+        // console.log(results);
+    });
+
+    // create the marker
+    new mapboxgl.Marker(el1)
+        .setLngLat([-73.995, 40.7606])
+        .setPopup(popup1) // sets a popup on this marker
+        .addTo(map);
+
+    new mapboxgl.Marker(el2)
+        .setLngLat([-73.9868, 40.76164])
+        .setPopup(popup2) // sets a popup on this marker
+        .addTo(map);
+
+    new mapboxgl.Marker(el3)
+        .setLngLat([-73.99564, 40.753735])
+        .setPopup(popup3) // sets a popup on this marker
+        .addTo(map);
+</script>
 </body>
 </html>
