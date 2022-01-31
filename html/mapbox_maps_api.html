@@ -10,7 +10,6 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
     <!-- Custom CSS -->
-
     <style>
         #map {
             height: 700px;
@@ -51,13 +50,13 @@
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
-<div id="selector">
-    <label for="zoom">Change zoom level:</label>
+<div>
+    <label for="zoomSelector">Change zoom level:</label>
 
-    <select name="zoom" id="zoom">
-        <option value="five">5</option>
-        <option value="fifteen">15</option>
-        <option value="twenty">20</option>
+    <select name="zoom" id="zoomSelector">
+        <option value="5">5</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
     </select>
 </div>
 
@@ -72,6 +71,8 @@
 <!-- keys.js -->
 <script src="../js/keys.js"></script>
 
+<script src="../js/jquery-2.2.4.js"></script>
+
 <!-- Custom JS -->
 <script>
     mapboxgl.accessToken = MAPBOX_EXERCISE ;
@@ -83,6 +84,7 @@
     });
 
     // Create a new marker
+
     const marker1 = new mapboxgl.Marker({
         color: "black",
         draggable: true
@@ -91,6 +93,7 @@
         .addTo(map);
      console.log("The marker is at " + marker1);
 
+
     const marker2 = new mapboxgl.Marker({
         color: "black",
         draggable: true
@@ -98,6 +101,7 @@
         .setLngLat([-73.9868, 40.76164])
         .addTo(map);
     console.log("The marker is at " + marker2);
+
 
     const marker3 = new mapboxgl.Marker({
         color: "black",
@@ -194,15 +198,45 @@
         .addTo(map);
 
     // add Navigation controls for zoom
-    // map.addControl(new mapboxgl.NavigationControl());
+
+    // $("#zoomSelector").click(function () {
+    //     let value = $("#zoomSelector").val()
+    //     map.setZoom(value)
+    // })
 
     // Add a text box for the user to enter an address that will use geocoding to center the map and place a marker on that location.
 
+    // $("#searchB0x").click(function () {
+    //     geocode($("#userSearch").val(), mapboxgl.accessToken).then(function (result) {
+    //         map.setCenter(result);
+    //         let marker = new mapboxgl.Marker()
+    //         .setLngLat(result)
+    //         .addTo(map);
+    //         allMarkers.push(marker);
+    //         let address;
+    //         reverseGeocode({
+    //             lng: result[0],
+    //             lat: result[1]
+    //         }, mapboxgl.accessToken).then(function (result) {
+    //             address. result.features[0].place_name;
+    //             let popup = new mapboxgl.Popup().setHTML("<h3>" + address + "</h3>");
+    //             marker.setPopup(popup);
+    //         });
+    //     });
+    // });
+    // let allMarkers = [];
+
+
     // Add a button that will hide all markers
+    // $("#hide").click(function () {
+    //     allMarkers.forEach(function (marker) {
+    //         marker.remove();
+    //     });
+    // });
 
     // animate a marker to bounce up and down. Alter the animation to stop after two seconds. Make the amount of bounce animation scale according to zoom level.
 
-    //Replace the generic marker icon with an image that is more appropriate for each restaurant.
+    // Replace the generic marker icon with an image that is more appropriate for each restaurant.
 
 </script>
 </body>
