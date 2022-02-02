@@ -16,12 +16,3 @@
     display: none;
 }
 
-.geocoder {
-    top: 10px;
-}
-
-.mapboxgl-ctrl-geocoder {
-    min-width: 100%;
-}
-
-
