@@ -7,39 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/weather_map_styles.css">
+    <!-- mapboxGL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- mapbox geocode -->
+    <script src="../js/mapbox-geocoder-utils.js"></script>
     <title>Weather App</title>
 </head>
 <body>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
 
     <div class="container">
-        <div class="top bg-primary d-flex justify-content-between align-items-center p-2">
+        <div class="top bg-primary d-flex justify-content-between align-items-center p-2"></div>
 
-            <h2 id="h2-top">Weather App</h2>
-
-        </div>
         <div class="search p-3">
-
             <form class="d-flex align-items-center" action="#">
-
                 <p class="mt-3 mr-3">Place</p>
-                <input type="text" placeholder="Enter City" name="search">
-                <button class="button btn-primary ml-3" type="submit"><i class="fa fa-search"></i>Search</button>
+
+                <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
+                <div id="geocoder" class="geocoder"></div>
 
             </form>
         </div>
 
         <div class="mid d-flex"></div>
 
+        <div id="map" style="width: 100%; height: 600px;"></div>
+        <pre id="coordinates" class="coordinates"></pre>
+
+
     </div>
 
-    <!-- JQUERY -->
-    <script src="../js/jquery-2.2.4.js"></script>
-    <!-- API KEY -->
-    <script src="../js/keys.js"></script>
-    <!-- AJAX -->
-    <script src="../js/weathermap.js"></script>
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- API KEY -->
+    <script src="../js/keys.js"></script>
+
+    <!-- JQUERY -->
+    <script src="../js/jquery-2.2.4.js"></script>
+
+    <!-- AJAX -->
+    <script src="../js/weathermap.js"></script>
+
 </body>
 </html>
