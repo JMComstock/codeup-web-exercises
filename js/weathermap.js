@@ -135,16 +135,16 @@ function onDragEnd() {
             let weatherImg = data.list[i].weather[0].icon;
 
             $(".mid").append(
-                `<div class="d-flex card m-1" style="width: 15rem;">` +
-                `<div class="col justify-content-center card-body">` +
-                `<h5 class="card-title bg-secondary">${newDate}</h5>` +
-                `<h6 class="card-subtitle mb-2 text-muted">${data.list[i].main.temp_min} \u00B0 F / ${data.list[0].main.temp_max} \u00B0 F</h6>` +
-                "<img src='https://openweathermap.org/img/w/" + weatherImg + ".png' alt='weather image'>" +
-                `<p class="card-text">Desctiption: ${data.list[i].weather[0].description}</p>` +
-                `<p class="card-text">Humidity: ${data.list[i].main.humidity}</p>` +
-                `<p class="card-text">Wind: ${data.list[i].wind.speed}</p>` +
-                `<p class="card-text">Pressure: ${data.list[i].main.pressure}</p>` +
-                `</div>` +
+                `<div class="d-flex card m-1 shadow mb-3 rounded" style="width: 15rem;">` +
+                    `<div class="col justify-content-center card-body">` +
+                        `<h5 class="d-flex card-header-pills justify-content-center">${newDate}</h5>` +
+                        `<h6 class="card-subtitle mb-2 text-dark justify-content-center">${data.list[i].main.temp_min} \u00B0 F / ${data.list[0].main.temp_max} \u00B0 F</h6>` +
+                        '<img class="d-flex col justify-content-center" src="https://openweathermap.org/img/w/' + weatherImg + '.png" alt="weather image">' +
+                        `<p class="card-text">Desctiption: ${data.list[i].weather[0].description}</p>` +
+                        `<p class="card-text">Humidity: ${data.list[i].main.humidity}</p>` +
+                        `<p class="card-text">Wind: ${data.list[i].wind.speed}</p>` +
+                        `<p class="card-text">Pressure: ${data.list[i].main.pressure}</p>` +
+                    `</div>` +
                 `</div>`);
         }
     })
