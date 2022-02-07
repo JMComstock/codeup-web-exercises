@@ -90,10 +90,10 @@ let foodOptions = [
 
 // NEW WAY
 
-// let newArray = foodOptions.map(restaurant => restaurant.specialty + "y");
+let newArray = foodOptions.map(restaurant => restaurant.specialty + "y");
 
-// console.log(foodOptions);
-// console.log(newArray);
+console.log(foodOptions);
+console.log(newArray);
 
 let names = foodOptions.map(restaurant => "<li>" + restaurant.name + "</li>");
 
