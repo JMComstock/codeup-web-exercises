@@ -40,12 +40,12 @@ const users = [
 
 // TODO: Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 
-let atLeast3 = users.filter(language => (language.languages.length >= 3));
+let atLeast3 = users.filter(user => (user.languages.length >= 3));
 console.log(atLeast3);
 
 // TODO: Use .map to create an array of strings where each element is a user's email address
 
-let emailAddress = users.map(email => email.email);
+let emailAddress = users.map(user => user.email);
 console.log(emailAddress);
 
 // TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
@@ -84,16 +84,18 @@ console.log(userNames);
 
 // TODO: BONUS: Use .reduce to get the unique list of languages from the list of users.
 
-// const allLanguages = users.map(lang => lang.languages);
-// console.log(allLanguages);
-//
-// let uniqueList = allLanguages.reduce((previousValue, currentValue) => {
-//     if(previousValue !== currentValue) {
-//         previousValue.push(uniqueList);
-//     }
-// },[]);
-//
-// console.log(uniqueList);
+
+let uniqueLanguages = users.reduce((langs, currentValue) => {
+
+    currentValue.languages.forEach(language => {
+        if(!langs.includes(language)) {
+            langs.push(language);
+        }
+    })
+    return langs;
+}, [])
+console.log(uniqueLanguages);
+
 
 
 
