@@ -12,10 +12,10 @@ const wait = (ms) => {
 }
 
 wait(1000).then(() => console.log('runs after 1 second'))
-wait(2000).then(() => console.log('runs after 2 second'))
-wait(3000).then(() => console.log('runs after 3 second'))
-wait(4000).then(() => console.log('runs after 4 second'))
-wait(5000).then(() => console.log('runs after 5 second'))
+wait(2000).then(() => console.log('runs after 2 seconds'))
+wait(3000).then(() => console.log('runs after 3 seconds'))
+wait(4000).then(() => console.log('runs after 4 seconds'))
+wait(5000).then(() => console.log('runs after 5 seconds'))
 
 
 
