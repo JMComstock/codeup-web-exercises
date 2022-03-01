@@ -82,36 +82,51 @@ console.log("---------------------------------------------");
 //     .then(res => res.json())
 //     .then(jsonObj => console.log(jsonObj));
 
+
+// // ================================================
+// // PUT
+// // ================================================
+//
+// let idOfThingToChange = 1;
+//
+// let newObj = {
+//     id: 1,
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+// }
+//
+// let options = {
+//     method: "PUT",
+//     body: JSON.stringify(newObj),
+//     headers : {
+//         'Content-type': 'application/json; charset=UTF-8',
+//     }
+// }
+//
+// fetch(`https://jsonplaceholder.typicode.com/posts/${idOfThingToChange}`, options)
+//     .then((response) => response.json())
+//     .then((json) => console.log(json));
+
+
 // ================================================
 // DELETE
 // ================================================
 
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
-    method: 'DELETE',
-});
+// fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//     method: 'DELETE',
+// });
 
-// ================================================
-// PUT
-// ================================================
-
-let idOfThingToChange = 1;
-
-let newObj = {
-    id: 1,
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-}
-
-let options = {
-    method: "PUT",
-    body: JSON.stringify(newObj),
-    headers : {
-        'Content-type': 'application/json; charset=UTF-8',
-    }
-}
-
-fetch(`https://jsonplaceholder.typicode.com/posts/${idOfThingToChange}`, options)
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+// DELETING A SPECIFIC MOVIE
+// unique id of the thing we're deleting
+// how we're going to delete it --> button to click on
+// button event listener
+// on event trigger --> delete from API
+// delete from API --> FETCH DELETE REQUEST
+// -- what does that fetch delete request require?
+    // where is the data located? --> url
+    // unique id of the thing we're deleting --> end of url after endpoints
+    // options (2nd parameter)
+    // method type: DELETE
+// before the fetch method --> grab the id of the movie that's being clicked on // data-id (attribute)
 
